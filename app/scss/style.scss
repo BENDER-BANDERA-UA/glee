@@ -32,6 +32,7 @@
 
   &__link {
     color: $default;
+    @extend %dmsans-700;
   }
 }
 
@@ -99,6 +100,114 @@
     text-align: center;
     background-color: #a3bbc8;
   }
+}
+
+.footer-top {
+  display: flex;
+  padding: 75px 0;
+  border-bottom: 1px solid #dae4e9;
+
+  &__logo {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__contact {
+    max-width: 200px;
+    margin-right: 100px;
+  }
+
+  &__contact-wrapper{
+    margin-top: 13px;
+  }
+
+  &__address {
+    line-height: 1.3;
+  }
+
+  &__nav-1 {
+    max-width: 170px;
+    margin-right: 130px;
+  }
+
+  &__nav-2 {
+    max-width: 100px;
+    margin-right: 200px;
+  }
+
+  &__item-form {
+    max-width: 270px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #1f2044;
+    padding-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $accent;
+    margin-bottom: 35px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__form-input {
+    font-size: 12px;
+    padding: 8px 15px;
+    color: #234969;
+    @extend %dmsans-400;
+    background-color: #fef7f0;
+    border: none;
+  }
+
+  &__form-btn {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 8px 15px;
+    color: #fff;
+    background-color: #a3bbc8;
+    @extend %dmsans-400;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 32px;
+
+  &__copy {
+    color: $accent;
+  }
+
+  &__list {
+    display: flex;
+  }
+  &__item + .footer-bottom__item{
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 18px;
+      top: 6px;
+      left: 15px;
+      background-color: $accent;
+    }
+  }
+
 }
 
 
