@@ -6,6 +6,10 @@
 .header {
   padding: 40px 0;
 
+  &__container {
+    max-width: 1770px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -117,7 +121,7 @@
     margin-right: 100px;
   }
 
-  &__contact-wrapper{
+  &__contact-wrapper {
     margin-top: 13px;
   }
 
@@ -194,10 +198,12 @@
   &__list {
     display: flex;
   }
-  &__item + .footer-bottom__item{
+
+  &__item+.footer-bottom__item {
     padding-left: 30px;
     position: relative;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       width: 1px;
