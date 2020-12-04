@@ -11,7 +11,6 @@ body {
   color: $default;
   background-color: #fff;
   @extend %dmsans-700;
-  border: none;
 }
 
 .main {
@@ -22,11 +21,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
 
-a {
-  font-size: 14px;
-  line-height: 32px;
-  color: $accent;
-  @extend %rubik-400;
+  &--big {
+    max-width: 1800px;
+  }
 }

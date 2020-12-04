@@ -1,0 +1,33 @@
+.slider {
+
+  &__container--big {}
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: #fcd7b6;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__title {
+    max-width: 470px;
+    font-size: 72px;
+    line-height: 70px;
+    margin: 220px 0 40px;
+    color: #243f4d;
+    @extend %rubik-500;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 370px;
+    font-size: 18px;
+    line-height: 30px;
+    @extend %rubik-400;
+    color: $default;
+  }
+}
