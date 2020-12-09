@@ -26,3 +26,12 @@ body {
     max-width: 1800px;
   }
 }
+
+button{
+  cursor: pointer;
+}
+
+a{
+  cursor: pointer;
+  color: $accent;
+}
