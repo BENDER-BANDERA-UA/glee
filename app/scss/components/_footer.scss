@@ -1,0 +1,157 @@
+.footer {
+  padding: 75px 0 40px;
+
+  &__link {
+    &:hover {
+      color: $hover;
+      text-transform: uppercase;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    font-size: 14px;
+    line-height: 1.8;
+    color: $accent;
+    @extend %rubik-400;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__contact {
+    display: flex;
+    max-width: 200px;
+    margin: 25px 100px 0 0;
+    font-style: normal;
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-link {
+      &:hover {
+        color: $hover;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    &-first {
+      max-width: 170px;
+      margin-right: 130px;
+    }
+
+    &-second {
+      max-width: 100px;
+      margin-right: 200px;
+    }
+
+    &-third {
+      max-width: 270px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: #1f2044;
+    padding-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    line-height: 1.4;
+    margin-bottom: 35px;
+
+    &:hover {
+      color: $hover;
+      text-transform: uppercase;
+    }
+  }
+
+  &__form {
+    align-items: center;
+
+    &-input {
+      font-size: 12px;
+      padding: 8px 15px;
+      color: #234969;
+      @extend %dmsans-400;
+      background-color: #fef7f0;
+      border: none;
+      z-index: 10;
+    }
+
+    &-btn {
+      line-height: 1.3;
+      margin-left: -3px;
+      padding: 9px 15px;
+      color: #fff;
+      background-color: #a3bbc8;
+      @extend %dmsans-400;
+      border: none;
+    }
+  }
+
+  &__copy-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 35px;
+    color: $accent;
+    @extend %rubik-400;
+  }
+
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      &:not(:first-child) {
+        margin-left: 30px;
+        position: relative;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 18px;
+        top: 4px;
+        left: -15px;
+        background-color: $accent;
+      }
+    }
+
+    &-link {
+      &:hover {
+        color: $hover;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
