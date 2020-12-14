@@ -1,0 +1,55 @@
+.clients-support {
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    background-color: $bg-partners;
+    align-items: center;
+    padding: 45px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 370px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      left: -75px;
+      top: 10px;
+    }
+
+    &--support::before {
+      background-image: url('../images/icons/support-icon.svg');
+      width: 52px;
+      height: 54px;
+    }
+
+    &--delivery::before {
+      background-image: url('../images/icons/delivery-icon.svg');
+      width: 55px;
+      height: 37px;
+    }
+
+    &--payment::before {
+      background-image: url('../images/icons/payment-icon.svg');
+      width: 54px;
+      height: 53px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #414141;
+    @extend %dmsans-700;
+  }
+
+  &__text {
+    line-height: 1.7;
+    color: #585858;
+    @extend %dmsans-400;
+  }
+}

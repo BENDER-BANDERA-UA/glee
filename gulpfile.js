@@ -13,29 +13,28 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-function browsersync() {
-  browserSync.init({
-    server: {
-      baseDir: 'app/'
-    },
-    notify: false
-  })
-}
-
+// функції для конвертації scss --> css
 function styles() {
   return src('app/scss/style.scss')
     .pipe(scss({
       outputStyle: 'compressed'
+      // compossed - конвертація в одну строфу (min) 
+      // expanded - повний формат як плагін
+      // nested - відступи такі ж як в scss
+      // compact - класи в одну строфу
     }))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
+      // умови для додавання префіксів
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream()); // оновлення сторінки без "перезавантаження"
+    
 }
 
+//функції для скриптів 
 function scripts() {
   return src([
       'node_modules/jquery/dist/jquery.js',
@@ -46,6 +45,15 @@ function scripts() {
     .pipe(uglify())
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
+}
+
+function browsersync() {
+  browserSync.init({
+    server: {
+      baseDir: 'app/'
+    },
+    notify: false //вимкнення сповіщень про оновлення сторінки   
+  })
 }
 
 function images() {
@@ -71,7 +79,7 @@ function images() {
         ]
       })
     ]))
-    .pipe(dest('dist/images'))
+    .pipe(dest('dist/images')) // шлях для стиснених файлів   
 }
 
 function build() {
@@ -80,7 +88,7 @@ function build() {
       'app/css/style.min.css',
       'app/js/main.min.js',
     ], {
-      base: 'app'
+      base: 'app' // переносить з урахуванням структури папок відносно вказаного    
     })
     .pipe(dest('dist'))
 }
@@ -89,7 +97,7 @@ function cleanDist() {
   return del('dist')
 }
 
-
+// функція стеження за файлами (змінами у них)
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
