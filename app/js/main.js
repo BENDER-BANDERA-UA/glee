@@ -6,6 +6,10 @@ $('.slider__wrapper').slick({
   fade: true,
   autoplay: true,
   autoplaySpeed: 2000
-})
+});
+
+var mixer = mixitup('.products-content');
+
+$
 
 });

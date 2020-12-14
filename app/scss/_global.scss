@@ -18,20 +18,28 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 
   &--big {
-    max-width: 1800px;
+    max-width: 1770px;
+    padding: 0;
   }
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-a{
+a {
   cursor: pointer;
   color: $accent;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.7;
+  color: $title;
+  text-align: center;
 }
